@@ -1,3 +1,6 @@
+import { bgBlack, red, yellow, blue } from "https://deno.land/std@0.152.0/fmt/colors.ts";
+
+
 interface Color {
     nombreColor: string
 }
@@ -15,9 +18,19 @@ let colores: Array<Color> = [
 
 ]
 
+const colorAzul = colores[0]
+const colorRojo = colores[1]
+const colorAmarillo = colores[2]
+
+console.log(bgBlack(blue(colorAzul.nombreColor)));
+console.log(bgBlack(red(colorRojo.nombreColor)));
+console.log(bgBlack(yellow(colorAmarillo.nombreColor)));
+
 export const  getColores  = ({ response }: { response:  any}) => {
-    response.body = colores
+   
+    response.body = {color1: colorAzul,color2: colorAmarillo,color3: colorRojo}
 }
+
 
 export const addColor = async ({
     request,
