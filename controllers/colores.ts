@@ -28,7 +28,7 @@ console.log(bgBlack(yellow(colorAmarillo.nombreColor)));
 
 export const  getColores  = ({ response }: { response:  any}) => {
    
-    response.body = {color1: colorAzul,color2: colorAmarillo,color3: colorRojo}
+    response.body = {colores}
 }
 
 
